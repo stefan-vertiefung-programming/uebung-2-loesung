@@ -22,7 +22,7 @@ public class CustomList<T> {
 
     public boolean add(T element) {
         if (size >= maximumSize) {
-            System.out.println("Out of bounds");
+            System.out.println("Array is full");
             return false;
         }
         elements[size] = element;
@@ -31,7 +31,7 @@ public class CustomList<T> {
     }
 
     public T get(int index) {
-        if (index >= size) {
+        if (index < 0 || index >= size) {
             return null;
         }
         return elements[index];

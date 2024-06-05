@@ -20,20 +20,20 @@ public class CustomList<T> {
         return size == 0;
     }
 
-    public boolean contains(Object other) {
+    public boolean contains(Object o) {
         for (int i = 0; i < size; i++) {
             T element = elements[i];
-            if (element.equals(other)) {
+            if (element.equals(o)) {
                 return true;
             }
         }
         return false;
     }
 
-    public int indexOf(Object other) {
+    public int indexOf(Object o) {
         for (int i = 0; i < size; i++) {
             T element = elements[i];
-            if (element.equals(other)) {
+            if (element.equals(o)) {
                 return i;
             }
         }
@@ -57,8 +57,8 @@ public class CustomList<T> {
         return elements[index];
     }
 
-    public boolean remove(Object other) {
-        int index = indexOf(other);
+    public boolean remove(Object o) {
+        int index = indexOf(o);
         if (index < 0) {
             return false;
         }
